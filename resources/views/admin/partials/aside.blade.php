@@ -1,5 +1,5 @@
 <aside class="aside-body">
-    <div class="py-2">
+    <div class="m-4">
         <ul>
             <li>
                 <a href="{{route('admin.home')}}">
@@ -16,7 +16,7 @@
             <li>
                 <a href="{{route('admin.projects.create')}}">
                     <i class="fa-solid fa-file-circle-plus"></i>
-                    Nuovo progetto
+                    Aggiungi
                 </a>
             </li>
         </ul>
