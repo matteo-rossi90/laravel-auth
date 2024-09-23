@@ -9,12 +9,12 @@
             </li>
             <li>
                 <a href="{{route('admin.projects.index')}}">
-                    <i class="fa-solid fa-image"></i>
+                    <i class="fa-solid fa-list"></i>
                     Progetti
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="{{route('admin.projects.create')}}">
                     <i class="fa-solid fa-file-circle-plus"></i>
                     Nuovo progetto
                 </a>

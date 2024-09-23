@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Project;
+use App\Functions\Helper;
+use App\Http\Requests\ProjectRequest;
 
 class ProjectController extends Controller
 {
@@ -23,15 +25,21 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.projects.create');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(ProjectRequest $request)
     {
-        //
+        $data = $request->all();
+
+        $data['slug'] = Helper::generateSlug($data['title'], Project::class);
+
+        $new_project = Project::create($data);
+
+        return redirect()->route('admin.projects.show', $new_project);
     }
 
     /**
@@ -48,15 +56,27 @@ class ProjectController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $project = Project::find($id);
+        return view('admin.projects.edit', compact('project'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(ProjectRequest $request, string $id)
     {
-        //
+        $project = Project::find($id);
+
+        $data = $request->all();
+
+        if ($data['title'] != $project->name) {
+            $data['slug'] = Helper::generateSlug($data['title'], Project::class);
+        }
+
+        $project->update($data);
+
+        return view('admin.projects.show', compact('project'));
+
     }
 
     /**

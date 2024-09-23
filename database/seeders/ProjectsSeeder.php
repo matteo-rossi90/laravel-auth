@@ -18,9 +18,11 @@ class ProjectsSeeder extends Seeder
         for ($i = 0; $i < 20; $i++) {
             $new_project = new Project();
             $new_project->title = $faker->sentence(6);
+            $new_project->theme = $faker->sentence(3);
+            $new_project->company = $faker->sentence(3, true);
             $new_project->slug = Helper::generateSlug($new_project->title, Project::class);
-            $new_project->image = $faker->imageUrl(640,480, 'projects', true);
-            $new_project->date = $faker->date('Y-m-d');
+            $new_project->start_date = $faker->date('Y-m-d');
+            $new_project->end_date = $faker->date('Y-m-d');
             $new_project->description = $faker->paragraph(4);
             $new_project->save();
         }

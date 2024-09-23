@@ -26,6 +26,12 @@ ul li{
     height: 100%;
 }
 
+aside{
+    ul li{
+        line-height: 40px;
+    }
+}
+
 .content{
     overflow:auto;
     width: 100%;
