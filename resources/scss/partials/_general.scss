@@ -3,11 +3,24 @@ aside{
 
     a{
         text-decoration:none;
-        color:white;
 
         &:hover{
             text-decoration:underline;
         }
+    }
+}
+
+header{
+
+    a{
+        color: white;
+    }
+}
+
+aside{
+
+    a{
+        color: black;
     }
 }
 
@@ -21,7 +34,7 @@ ul li{
 }
 
 .aside-body{
-    background-color:black;
+    background-color:rgb(219, 219, 219);
     width: 200px;
     height: 100%;
 }

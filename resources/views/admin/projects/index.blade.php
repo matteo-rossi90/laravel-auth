@@ -44,6 +44,7 @@
         </tbody>
         </table>
 
+        {{$projects->links()}}
 
 </div>
 
