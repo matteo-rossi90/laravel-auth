@@ -17,8 +17,12 @@
     @include('admin.partials.header')
     <div class="d-flex wrapper">
 
-        @include('admin.partials.aside')
-        @yield('content')
+        @auth
+            @include('admin.partials.aside')
+        @endauth
+        <div class="content">
+            @yield('content')
+        </div>
 
     </div>
 

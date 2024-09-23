@@ -1,7 +1,7 @@
 <header>
     <nav class="bg-primary text-white" data-bs-theme="primary">
         <div class="container-fluid">
-            <div class="py-2 d-flex justify-content-between align-items-center">
+            <div class="py-1 d-flex justify-content-between align-items-center">
                 <div class="ms-4">
                     <a href="{{route('home')}}" target="_blank">BOOLFOLIO</a>
                 </div>

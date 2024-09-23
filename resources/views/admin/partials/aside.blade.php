@@ -2,13 +2,13 @@
     <div class="py-2">
         <ul>
             <li>
-                <a href="">
+                <a href="{{route('admin.home')}}">
                     <i class="fa-solid fa-house"></i>
                     Home
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="{{route('admin.projects.index')}}">
                     <i class="fa-solid fa-image"></i>
                     Progetti
                 </a>

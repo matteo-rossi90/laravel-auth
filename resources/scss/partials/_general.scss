@@ -17,10 +17,16 @@ ul li{
 
 .wrapper{
     height:calc(100vh - 48px);
+    overflow:hidden;
 }
 
 .aside-body{
     background-color:black;
     width: 200px;
     height: 100%;
+}
+
+.content{
+    overflow:auto;
+    width: 100%;
 }
