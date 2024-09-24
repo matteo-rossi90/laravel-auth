@@ -35,7 +35,7 @@ ul li{
 
 .aside-body{
     background-color:rgb(219, 219, 219);
-    width: 200px;
+    width: 150px;
     height: 100%;
 }
 
@@ -51,5 +51,5 @@ aside{
 
 .content{
     overflow:auto;
-    width: 100%;
+    width: calc(100% - 150px);
 }

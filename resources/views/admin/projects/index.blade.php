@@ -6,6 +6,12 @@
 
     <h2>I miei progetti</h2>
 
+    @if (session('delete'))
+        <div class="alert alert-success">
+            {{session('delete')}}
+        </div>
+    @endif
+
         <table class="table text-center">
         <thead>
             <tr>
@@ -43,8 +49,9 @@
             @endforeach
         </tbody>
         </table>
-
-        {{$projects->links()}}
+        <div class="d-flex justify-content-center">
+            {{$projects->links()}}
+        </div>
 
 </div>
 

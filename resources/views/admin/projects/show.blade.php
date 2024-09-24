@@ -25,6 +25,8 @@
 
     </ul>
 
+    <a href="{{route('admin.projects.index')}}" class="btn btn-primary">Indietro</a>
+
 </div>
 
 @endsection

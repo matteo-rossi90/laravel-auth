@@ -75,7 +75,7 @@ class ProjectController extends Controller
 
         $project->update($data);
 
-        return view('admin.projects.show', compact('project'));
+        return redirect()->route('admin.projects.show', compact('project'));
 
     }
 
@@ -83,7 +83,11 @@ class ProjectController extends Controller
      * Remove the specified resource from storage.
      */
     public function destroy(string $id)
+
     {
-        //
+        $projects = Project::find($id);
+        $projects->delete();
+
+        return redirect()->route('admin.projects.index')->with('delete', 'Il progetto è stato eliminato correttamente');
     }
 }
